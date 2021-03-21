@@ -1,17 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # CS 5010
-#  
-# # Semester Project 
-#  
-# # Happiness Data Set
-#  
-# # Team GH2JM:
-# 
-# # Haley Blair, Melanie Sattler, Jen Leopold, Hayley Kisiel, & George White 
-# 
-
 # ## Importing necessary packages: 
 
 # In[2]:
