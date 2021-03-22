@@ -22,11 +22,11 @@ import plotly.io as pio
 # In[22]:
 
 
-df_2015 = pd.read_csv ('2015.csv',                        usecols= ['Country','Region','Happiness Rank','Happiness Score'])
-df_2016 = pd.read_csv ('2016.csv',                        usecols= ['Country','Happiness Rank', 'Happiness Score'])
-df_2017 = pd.read_csv ('2017.csv',                        usecols= ['Country','Happiness.Rank', 'Happiness.Score','Family','Dystopia.Residual'])
-df_2018 = pd.read_csv ('2018.csv',                        usecols= ['Overall rank','Country or region','Score'])
-df_2019 = pd.read_csv ('2019.csv',                        usecols= ['Overall rank','Country or region','Score',                        'GDP per capita','Social support','Healthy life expectancy',                        'Freedom to make life choices','Generosity','Perceptions of corruption'])
+df_2015 = pd.read_csv ('2015.csv', usecols= ['Country','Region','Happiness Rank','Happiness Score'])
+df_2016 = pd.read_csv ('2016.csv', usecols= ['Country','Happiness Rank', 'Happiness Score'])
+df_2017 = pd.read_csv ('2017.csv', usecols= ['Country','Happiness.Rank', 'Happiness.Score','Family','Dystopia.Residual'])
+df_2018 = pd.read_csv ('2018.csv', usecols= ['Overall rank','Country or region','Score'])
+df_2019 = pd.read_csv ('2019.csv', usecols= ['Overall rank','Country or region','Score','GDP per capita','Social support','Healthy life expectancy',                        'Freedom to make life choices','Generosity','Perceptions of corruption'])
 
 
 # ### Creating one dataframe from all the separate files for different years 
@@ -45,10 +45,10 @@ df = df.merge(df_2019, on='Country or region')
 # In[5]:
 
 
-df.rename(columns={'Happiness Rank_x': 'Rank 2015','Happiness Score_x': 'Happiness Score 2015',    'Happiness Rank_y': 'Rank 2016','Happiness Score_y': 'Happiness Score 2016',    'Happiness.Rank': 'Rank 2017','Happiness.Score': 'Happiness Score 2017',    'Dystopia.Residual': 'Dystopia Residual','Overall rank_x': 'Rank 2018',    'Score_x': 'Happiness Score 2018','Overall rank_y': 'Rank 2019',    'Score_y': 'Happiness Score 2019'}, inplace=True)
+df.rename(columns={'Happiness Rank_x': 'Rank 2015','Happiness Score_x': 'Happiness Score 2015', 'Happiness Rank_y': 'Rank 2016','Happiness Score_y': 'Happiness Score 2016',    'Happiness.Rank': 'Rank 2017','Happiness.Score': 'Happiness Score 2017',    'Dystopia.Residual': 'Dystopia Residual','Overall rank_x': 'Rank 2018',    'Score_x': 'Happiness Score 2018','Overall rank_y': 'Rank 2019',    'Score_y': 'Happiness Score 2019'}, inplace=True)
     
 # rearrange columns
-df = df[['Country','Region','Happiness Score 2015','Happiness Score 2016',        'Happiness Score 2017','Happiness Score 2018','Happiness Score 2019','Rank 2015','Rank 2016'        ,'Rank 2017','Rank 2018','Rank 2019','Family','GDP per capita','Social support',        'Healthy life expectancy','Freedom to make life choices','Generosity',        'Perceptions of corruption','Dystopia Residual']]
+df = df[['Country','Region','Happiness Score 2015','Happiness Score 2016','Happiness Score 2017','Happiness Score 2018','Happiness Score 2019','Rank 2015','Rank 2016'        ,'Rank 2017','Rank 2018','Rank 2019','Family','GDP per capita','Social support',        'Healthy life expectancy','Freedom to make life choices','Generosity',        'Perceptions of corruption','Dystopia Residual']]
 
 
 # ### Top 10 Happiness scores for 2019 
