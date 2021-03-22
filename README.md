@@ -1,6 +1,6 @@
 # Country Happiness
 
-An analysis on what factors affect a country's overall happiness. 
+An analysis on what factors affect a country's overall happiness throughout the world. 
 
 ## Description
 
